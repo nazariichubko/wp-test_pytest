@@ -1,6 +1,7 @@
 import pytest
 import requests
 from random import randrange
+import logging
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -14,6 +15,10 @@ from xlwt import Workbook
 driver = webdriver.Chrome(r"C:\Users\nazar\git\wp-test_pytest\src\webdriver_chrome_exe\chromedriver.exe")
 wb = Workbook()
 sheet = wb.add_sheet("test_result.csv")
+
+logging.basicConfig(filename='config_check.log', level=logging.INFO)
+logging.info('start')
+
 
 def test_open_calendar_page():
     driver.get('http://localhost/wp-test/calendar/test-calendar/')
@@ -50,4 +55,8 @@ def test_add_comment():
     assert comment_displayed.is_displayed() == True
 
     driver.quit()
+
+
+logging.info('done')
+
 
