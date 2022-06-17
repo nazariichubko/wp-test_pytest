@@ -1,0 +1,6 @@
+<built-in function time>,Comment has been added,PASSED
+1655492818.8209112,Comment has been added,PASSED
+06_17_2022_22_13_21,Comment has NOT been added,Failed
+06_17_2022_22_19_23,test_id_1,Calendar page is opened.,PASSED
+06_17_2022_22_19_23,test_id_2,Today date displayed correctly,PASSED
+06_17_2022_22_19_23,test_id_3,Comment has been added,PASSED
