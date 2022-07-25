@@ -1,0 +1,10 @@
+{
+  "groups": [
+    {
+      "group_id": 1,
+      "details": {
+        "start_before": "30"
+      }
+    }
+  ]
+}

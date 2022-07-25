@@ -4,6 +4,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from src.Classes.fake_data import FakeData as fd
+import requests
 
 driver = webdriver.Chrome(r"C:\Users\nazar\git\wp-test_pytest\src\webdriver_chrome_exe\chromedriver.exe")
 time_now  = datetime.datetime.now().strftime('%m_%d_%Y_%H_%M_%S')
@@ -39,6 +40,7 @@ def test_current_date():
         with open('test_results.csv', 'a', newline='') as csv_file:
             writer = csv.writer((csv_file))
             writer.writerow([time_now, 'Today data is not displayed', 'Failed'])
+
 
 
 def test_add_comment():
